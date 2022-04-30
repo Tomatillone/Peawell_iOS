@@ -12,6 +12,7 @@
 		9587B098281C68AB00E7599B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587B097281C68AB00E7599B /* MainViewController.swift */; };
 		9587B09D281C68AD00E7599B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9587B09C281C68AD00E7599B /* Assets.xcassets */; };
 		9587B0A0281C68AD00E7599B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9587B09E281C68AD00E7599B /* LaunchScreen.storyboard */; };
+		95913D64281D92470057D573 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95913D63281D92470057D573 /* ReminderViewController.swift */; };
 		95F3871F281C72BD00C7E2A2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F3871E281C72BD00C7E2A2 /* TabBarViewController.swift */; };
 		95F38721281C734E00C7E2A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F38720281C734E00C7E2A2 /* SettingsViewController.swift */; };
 		95F38723281C737000C7E2A2 /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F38722281C737000C7E2A2 /* ActionsViewController.swift */; };
@@ -25,6 +26,7 @@
 		9587B09C281C68AD00E7599B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9587B09F281C68AD00E7599B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9587B0A1281C68AD00E7599B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95913D63281D92470057D573 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		95F3871E281C72BD00C7E2A2 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		95F38720281C734E00C7E2A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		95F38722281C737000C7E2A2 /* ActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				95F3871E281C72BD00C7E2A2 /* TabBarViewController.swift */,
 				9587B097281C68AB00E7599B /* MainViewController.swift */,
 				95F38722281C737000C7E2A2 /* ActionsViewController.swift */,
+				95913D63281D92470057D573 /* ReminderViewController.swift */,
 				95F38720281C734E00C7E2A2 /* SettingsViewController.swift */,
 			);
 			name = Controllers;
@@ -153,6 +156,7 @@
 			files = (
 				95F38723281C737000C7E2A2 /* ActionsViewController.swift in Sources */,
 				95F3871F281C72BD00C7E2A2 /* TabBarViewController.swift in Sources */,
+				95913D64281D92470057D573 /* ReminderViewController.swift in Sources */,
 				9587B098281C68AB00E7599B /* MainViewController.swift in Sources */,
 				9587B094281C68AB00E7599B /* AppDelegate.swift in Sources */,
 				95F38721281C734E00C7E2A2 /* SettingsViewController.swift in Sources */,

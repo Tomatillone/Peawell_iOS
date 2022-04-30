@@ -16,32 +16,37 @@ class TabBarViewController: UITabBarController {
         tabBar.isTranslucent = true
         tabBar.backgroundColor = UIColor.systemGray6
         //  maps VCs
-        let vc1 = MainViewController()
-        let vc2 = ActionsViewController()
+        let vc0 = MainViewController()
+        let vc1 = ActionsViewController()
+        let vc2 = ReminderViewController()
         let vc3 = SettingsViewController()
         //  force large title
 //        vc1.navigationItem.largeTitleDisplayMode = .automatic
 //        vc2.navigationItem.largeTitleDisplayMode = .always
 //        vc3.navigationItem.largeTitleDisplayMode = .always
         //  set titles for the bar
-        vc1.title = "Beanwell"
-        vc2.title = "Actions"
+        vc0.title = "Beanwell"
+        vc1.title = "Actions"
+        vc2.title = "Reminders"
         vc3.title = "Settings"
         //  prepares links between bar and controllers
+        let nav0 = UINavigationController(rootViewController: vc0)
         let nav1 = UINavigationController(rootViewController: vc1)
         let nav2 = UINavigationController(rootViewController: vc2)
         let nav3 = UINavigationController(rootViewController: vc3)
         //  set icons to bar
-        nav1.tabBarItem = UITabBarItem(title: "Beanwell", image: UIImage(systemName: "calendar"), tag: 1)
-        nav2.tabBarItem = UITabBarItem(title: "Actions", image: UIImage(systemName: "text.badge.plus"), tag: 2)
+        nav0.tabBarItem = UITabBarItem(title: "Beanwell", image: UIImage(systemName: "calendar"), tag: 0)
+        nav1.tabBarItem = UITabBarItem(title: "Actions", image: UIImage(systemName: "text.badge.plus"), tag: 1)
+        nav2.tabBarItem = UITabBarItem(title: "Reminders", image: UIImage(systemName: "bell"), tag: 2)
         nav3.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 3)
 
         //  force large title
+        nav0.navigationBar.prefersLargeTitles = false
         nav1.navigationBar.prefersLargeTitles = true
         nav2.navigationBar.prefersLargeTitles = true
         nav3.navigationBar.prefersLargeTitles = true
         //  actually adding controls to bar
-        setViewControllers([nav1, nav2, nav3], animated: true)
+        setViewControllers([nav0, nav1, nav2, nav3], animated: true)
         // Do any additional setup after loading the view.
     }
     

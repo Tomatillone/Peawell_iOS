@@ -1,20 +1,20 @@
 //
-//  ActionsViewController.swift
+//  ReminderViewController.swift
 //  Beanwell
 //
-//  Created by Dennis on 29.04.22.
+//  Created by Dennis on 30.04.22.
 //
 
 import UIKit
 
-class ActionsViewController: UITableViewController {
+class ReminderViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.systemBackground
         self.navigationItem.rightBarButtonItem = self.editButtonItem;
-           
+
     }
     
 
