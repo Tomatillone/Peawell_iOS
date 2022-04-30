@@ -22,6 +22,14 @@
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconSymbolName</key>
+			<string>bell</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>org.semmelstulle.beanwell.RemindersAction</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Reminders</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconSymbolName</key>
 			<string>gear</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>org.semmelstulle.beanwell.SettingsAction</string>

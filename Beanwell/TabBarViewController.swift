@@ -41,7 +41,7 @@ class TabBarViewController: UITabBarController {
         nav3.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 3)
 
         //  force large title
-        nav0.navigationBar.prefersLargeTitles = false
+        nav0.navigationBar.prefersLargeTitles = true
         nav1.navigationBar.prefersLargeTitles = true
         nav2.navigationBar.prefersLargeTitles = true
         nav3.navigationBar.prefersLargeTitles = true

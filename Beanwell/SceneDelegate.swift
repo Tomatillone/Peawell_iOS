@@ -66,8 +66,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             tabBar.selectedIndex = 0
         case "org.semmelstulle.beanwell.ActionsAction":
             tabBar.selectedIndex = 1
-        case "org.semmelstulle.beanwell.SettingsAction":
+        case "org.semmelstulle.beanwell.RemindersAction":
             tabBar.selectedIndex = 2
+        case "org.semmelstulle.beanwell.SettingsAction":
+            tabBar.selectedIndex = 3
         default:
             print("No item found.")
         }
