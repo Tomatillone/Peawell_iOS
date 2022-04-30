@@ -34,27 +34,34 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 var dialogMessage = UIAlertController(title: "Attention", message: "I am an alert message you cannot dissmiss.", preferredStyle: .alert)
 // Present alert to user
 
-
-let sVC = SettingsViewController()
-                            sVC.modalPresentationStyle = .fullScreen
-                            sVC.modalTransitionStyle = .crossDissolve
-                            self.present(sVC, animated: true)
-
+    /*
+    let sVC = SettingsViewController()
+    sVC.modalPresentationStyle = .fullScreen
+    sVC.modalTransitionStyle = .crossDissolve
+    self.present(sVC, animated: true)
+    */
+     
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
         if shortcutItem.type == "org.semmelstulle.beanwell.AgendaAction" {
             
-            self.present(dialogMessage, animated: true, completion: nil)
+            //self.present(dialogMessage, animated: true, completion: nil)
 
         }
         if shortcutItem.type == "org.semmelstulle.beanwell.ActionsAction" {
             // shortcut was triggered!
-            self.present(dialogMessage, animated: true, completion: nil)
+            //self.present(dialogMessage, animated: true, completion: nil)
 
         }
         if shortcutItem.type == "org.semmelstulle.beanwell.SettingsAction" {
             // shortcut was triggered!
-            self.present(dialogMessage, animated: true, completion: nil)
+            
+             
+            //self.window = UIWindow(frame: UIScreen.main.bounds)
+            //self.window?.rootViewController = sVC
+            //self.window?.makeKeyAndVisible()
+            //self.window?.becomeKey()
+            //self.present(dialogMessage, animated: true, completion: nil)
 
         }
     }
