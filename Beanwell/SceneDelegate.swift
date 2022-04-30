@@ -9,15 +9,57 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    // List of known shortcut actions.
+    enum ActionType: String {
+        case agendaAction = "AgendaAction"
+        case actionsAction = "ActionsAction"
+        case settingsAction = "SettingsAction"
+    }
+    
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let window = UIWindow(windowScene: windowScene)
+        window.rootViewController = TabBarViewController()
+        window.makeKeyAndVisible()
+        self.window = window
+        
     }
+    
+    
+    //  makes it show a notification, is called later for testing purposes
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Quick Action", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        window?.rootViewController?.present(alertController, animated: true, completion: nil)
+    }
+    
+    func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
+        /** In this sample an alert is being shown to indicate that the action has been triggered,
+            but in real code the functionality for the quick action would be triggered.
+        */
+        if let actionTypeValue = ActionType(rawValue: shortcutItem.type) {
+            switch actionTypeValue {
+            case .agendaAction:
+                showAlert(message: "Funktioniert")
+            case .actionsAction:
+                showAlert(message: "Funktioniert")
+
+            case .settingsAction:
+                    return false
+            }
+        }
+        return true
+    }
+    
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

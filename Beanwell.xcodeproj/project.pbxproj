@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		9587B094281C68AB00E7599B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587B093281C68AB00E7599B /* AppDelegate.swift */; };
 		9587B096281C68AB00E7599B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587B095281C68AB00E7599B /* SceneDelegate.swift */; };
-		9587B098281C68AB00E7599B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587B097281C68AB00E7599B /* ViewController.swift */; };
-		9587B09B281C68AB00E7599B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9587B099281C68AB00E7599B /* Main.storyboard */; };
+		9587B098281C68AB00E7599B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587B097281C68AB00E7599B /* MainViewController.swift */; };
 		9587B09D281C68AD00E7599B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9587B09C281C68AD00E7599B /* Assets.xcassets */; };
 		9587B0A0281C68AD00E7599B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9587B09E281C68AD00E7599B /* LaunchScreen.storyboard */; };
+		95F3871F281C72BD00C7E2A2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F3871E281C72BD00C7E2A2 /* TabBarViewController.swift */; };
+		95F38721281C734E00C7E2A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F38720281C734E00C7E2A2 /* SettingsViewController.swift */; };
+		95F38723281C737000C7E2A2 /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F38722281C737000C7E2A2 /* ActionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9587B090281C68AB00E7599B /* Beanwell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beanwell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9587B093281C68AB00E7599B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9587B095281C68AB00E7599B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9587B097281C68AB00E7599B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9587B09A281C68AB00E7599B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9587B097281C68AB00E7599B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9587B09C281C68AD00E7599B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9587B09F281C68AD00E7599B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9587B0A1281C68AD00E7599B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95F3871E281C72BD00C7E2A2 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		95F38720281C734E00C7E2A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		95F38722281C737000C7E2A2 /* ActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,25 @@
 		9587B092281C68AB00E7599B /* Beanwell */ = {
 			isa = PBXGroup;
 			children = (
+				95F38724281C747C00C7E2A2 /* Controllers */,
 				9587B093281C68AB00E7599B /* AppDelegate.swift */,
 				9587B095281C68AB00E7599B /* SceneDelegate.swift */,
-				9587B097281C68AB00E7599B /* ViewController.swift */,
-				9587B099281C68AB00E7599B /* Main.storyboard */,
 				9587B09C281C68AD00E7599B /* Assets.xcassets */,
 				9587B09E281C68AD00E7599B /* LaunchScreen.storyboard */,
 				9587B0A1281C68AD00E7599B /* Info.plist */,
 			);
 			path = Beanwell;
+			sourceTree = "<group>";
+		};
+		95F38724281C747C00C7E2A2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				95F3871E281C72BD00C7E2A2 /* TabBarViewController.swift */,
+				9587B097281C68AB00E7599B /* MainViewController.swift */,
+				95F38722281C737000C7E2A2 /* ActionsViewController.swift */,
+				95F38720281C734E00C7E2A2 /* SettingsViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +141,6 @@
 			files = (
 				9587B0A0281C68AD00E7599B /* LaunchScreen.storyboard in Resources */,
 				9587B09D281C68AD00E7599B /* Assets.xcassets in Resources */,
-				9587B09B281C68AB00E7599B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9587B098281C68AB00E7599B /* ViewController.swift in Sources */,
+				95F38723281C737000C7E2A2 /* ActionsViewController.swift in Sources */,
+				95F3871F281C72BD00C7E2A2 /* TabBarViewController.swift in Sources */,
+				9587B098281C68AB00E7599B /* MainViewController.swift in Sources */,
 				9587B094281C68AB00E7599B /* AppDelegate.swift in Sources */,
+				95F38721281C734E00C7E2A2 /* SettingsViewController.swift in Sources */,
 				9587B096281C68AB00E7599B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9587B099281C68AB00E7599B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9587B09A281C68AB00E7599B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9587B09E281C68AD00E7599B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,13 +301,14 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.semmelstulle.Beanwell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -321,13 +330,14 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.semmelstulle.Beanwell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
