@@ -12,8 +12,9 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //  fancy up TabBar
         tabBar.isTranslucent = true
-        tabBar.backgroundColor = .darkGray
+        tabBar.backgroundColor = UIColor.systemGray6
         //  maps VCs
         let vc1 = MainViewController()
         let vc2 = ActionsViewController()

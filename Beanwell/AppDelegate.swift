@@ -11,8 +11,6 @@ import UIKit
 class AppDelegate: NSObject, UIApplicationDelegate {
     
     var window: UIWindow?
-
-
     
 
     // MARK: UISceneSession Lifecycle
@@ -41,6 +39,7 @@ var dialogMessage = UIAlertController(title: "Attention", message: "I am an aler
     self.present(sVC, animated: true)
     */
      
+/*
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
         if shortcutItem.type == "org.semmelstulle.beanwell.AgendaAction" {
@@ -68,5 +67,5 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
     return true
 }
-
+*/
 
