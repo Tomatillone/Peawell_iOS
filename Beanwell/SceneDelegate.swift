@@ -9,13 +9,6 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    // List of known shortcut actions.
-    enum ActionType: String {
-        case agendaAction = "AgendaAction"
-        case actionsAction = "ActionsAction"
-        case settingsAction = "SettingsAction"
-    }
-    
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -33,34 +26,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
     }
     
-    
-    //  makes it show a notification, is called later for testing purposes
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "Quick Action", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-        window?.rootViewController?.present(alertController, animated: true, completion: nil)
-    }
-    
-    func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
-        /** In this sample an alert is being shown to indicate that the action has been triggered,
-            but in real code the functionality for the quick action would be triggered.
-        */
-        if let actionTypeValue = ActionType(rawValue: shortcutItem.type) {
-            switch actionTypeValue {
-            case .agendaAction:
-                showAlert(message: "Funktioniert")
-            case .actionsAction:
-                showAlert(message: "Funktioniert")
-
-            case .settingsAction:
-                    return false
-            }
-        }
-        return true
-    }
-    
-
-
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
@@ -77,10 +42,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
     }
-
+    
+    
+    
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        
+        
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

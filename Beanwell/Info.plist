@@ -8,7 +8,7 @@
 			<key>UIApplicationShortcutItemIconSymbolName</key>
 			<string>calendar</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>AgendaAction</string>
+			<string>org.semmelstulle.beanwell.AgendaAction</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Agenda</string>
 		</dict>
@@ -16,7 +16,7 @@
 			<key>UIApplicationShortcutItemIconSymbolName</key>
 			<string>text.badge.plus</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>ActionsAction</string>
+			<string>org.semmelstulle.beanwell.ActionsAction</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Actions</string>
 		</dict>
@@ -24,7 +24,7 @@
 			<key>UIApplicationShortcutItemIconSymbolName</key>
 			<string>gear</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>SettingsAction</string>
+			<string>org.semmelstulle.beanwell.SettingsAction</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Settings</string>
 		</dict>

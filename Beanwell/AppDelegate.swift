@@ -8,20 +8,12 @@
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: NSObject, UIApplicationDelegate {
+    
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = TabBarViewController()
-        window.makeKeyAndVisible()
-        self.window = window
-        
-        
-        return true
-    }
+
+    
 
     // MARK: UISceneSession Lifecycle
 
@@ -38,4 +30,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+var dialogMessage = UIAlertController(title: "Attention", message: "I am an alert message you cannot dissmiss.", preferredStyle: .alert)
+// Present alert to user
+
+
+let sVC = SettingsViewController()
+                            sVC.modalPresentationStyle = .fullScreen
+                            sVC.modalTransitionStyle = .crossDissolve
+                            self.present(sVC, animated: true)
+
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
+        if shortcutItem.type == "org.semmelstulle.beanwell.AgendaAction" {
+            
+            self.present(dialogMessage, animated: true, completion: nil)
+
+        }
+        if shortcutItem.type == "org.semmelstulle.beanwell.ActionsAction" {
+            // shortcut was triggered!
+            self.present(dialogMessage, animated: true, completion: nil)
+
+        }
+        if shortcutItem.type == "org.semmelstulle.beanwell.SettingsAction" {
+            // shortcut was triggered!
+            self.present(dialogMessage, animated: true, completion: nil)
+
+        }
+    }
+
+    return true
+}
+
 
