@@ -7,10 +7,14 @@
 
 import UIKit
 
-class ReminderViewController: UICollectionViewController {
+class ReminderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //@IBOutlet var reminderCollection: UICollectionView!
+        
         
         //  setting up top navigation and background
         view.backgroundColor = UIColor.systemBackground
@@ -18,30 +22,13 @@ class ReminderViewController: UICollectionViewController {
         //self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action:(Selector("addReminder")))
 
         
-        //  set dummy data for table view
+        /*/  set dummy data for table view
         let dummy0: String = "Dummy 1"
         let dummy1: String = "Dummy 2"
         let dummy2: String = "Dummy 3"
         let dummyArr = [dummy0, dummy1, dummy2]
+        */
         
-        
-        //  create config for the UICollectionViewCompositionalLayout
-        let compositLayout = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
-        
-        //  create layout for the UICollectionView below
-        let collectionLayout = UICollectionViewCompositionalLayout.list(using: compositLayout)
-        
-        //  creates the collectionView layout
-        lazy var actionsCollection: UICollectionView = {
-            let actionsCollection = UICollectionView(frame: .zero, collectionViewLayout: collectionLayout)
-            collectionView.translatesAutoresizingMaskIntoConstraints = true
-            collectionView.backgroundColor = .systemGroupedBackground
-            
-            return actionsCollection
-        }()
-        
-        
-
     }
     
     
@@ -54,5 +41,32 @@ class ReminderViewController: UICollectionViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
+/*
+extension ReminderViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath, animated: true) {
+    collectionView.deselectItem(at: IndexPath, animated: true)
+    print("you tap")
+    }
+    
+    
+}
+
+extension ReminderViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 12
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collecionView.dequeueReusableCell(withIdentifier: "", for indexPath)
+    }
+    
+}
+
+extension ReminderViewController: UICollectionViewDelegateFlowLayout {
+    
+}
+*/
