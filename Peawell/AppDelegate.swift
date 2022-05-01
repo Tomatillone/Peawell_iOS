@@ -2,20 +2,16 @@
 //  AppDelegate.swift
 //  Peawell
 //
-//  Created by Dennis on 01.05.22.
+//  Created by Dennis on 29.04.22.
 //
 
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
+class AppDelegate: NSObject, UIApplicationDelegate {
+    
+    var window: UIWindow?
+    
 
     // MARK: UISceneSession Lifecycle
 
@@ -31,6 +27,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
 }
+
+var dialogMessage = UIAlertController(title: "Attention", message: "I am an alert message you cannot dissmiss.", preferredStyle: .alert)
+// Present alert to user
+
+    /*
+    let sVC = SettingsViewController()
+    sVC.modalPresentationStyle = .fullScreen
+    sVC.modalTransitionStyle = .crossDissolve
+    self.present(sVC, animated: true)
+    */
+     
+/*
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
+        if shortcutItem.type == "org.semmelstulle.beanwell.AgendaAction" {
+            
+            //self.present(dialogMessage, animated: true, completion: nil)
+
+        }
+        if shortcutItem.type == "org.semmelstulle.beanwell.ActionsAction" {
+            // shortcut was triggered!
+            //self.present(dialogMessage, animated: true, completion: nil)
+
+        }
+        if shortcutItem.type == "org.semmelstulle.beanwell.SettingsAction" {
+            // shortcut was triggered!
+            
+             
+            //self.window = UIWindow(frame: UIScreen.main.bounds)
+            //self.window?.rootViewController = sVC
+            //self.window?.makeKeyAndVisible()
+            //self.window?.becomeKey()
+            //self.present(dialogMessage, animated: true, completion: nil)
+
+        }
+    }
+
+    return true
+}
+*/
 
