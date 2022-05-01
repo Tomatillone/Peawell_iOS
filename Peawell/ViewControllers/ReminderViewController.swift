@@ -7,24 +7,44 @@
 
 import UIKit
 
-class ReminderViewController: UITableViewController {
+class ReminderViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        //  set dummy data for table view
-        let dummy0 = "Dummy 1"
-        let dummy1 = "Dummy 2"
-        let dummy2 = "Dummy 3"
-        let actionsData = [dummy0, dummy1, dummy2]
-        
+        //  setting up top navigation and background
         view.backgroundColor = UIColor.systemBackground
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         //self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action:(Selector("addReminder")))
 
-        //view.
+        
+        //  set dummy data for table view
+        let dummy0: String = "Dummy 1"
+        let dummy1: String = "Dummy 2"
+        let dummy2: String = "Dummy 3"
+        let dummyArr = [dummy0, dummy1, dummy2]
+        
+        
+        //  create config for the UICollectionViewCompositionalLayout
+        let compositLayout = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        
+        //  create layout for the UICollectionView below
+        let collectionLayout = UICollectionViewCompositionalLayout.list(using: compositLayout)
+        
+        //  creates the collectionView layout
+        lazy var actionsCollection: UICollectionView = {
+            let actionsCollection = UICollectionView(frame: .zero, collectionViewLayout: collectionLayout)
+            collectionView.translatesAutoresizingMaskIntoConstraints = true
+            collectionView.backgroundColor = .systemGroupedBackground
+            
+            return actionsCollection
+        }()
+        
+        
+
     }
+    
+    
     /*
     // MARK: - Navigation
 
