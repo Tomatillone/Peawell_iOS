@@ -7,16 +7,19 @@
 
 import UIKit
 
-class ActionsViewController: UITableViewController {
+class ActionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.systemBackground
         self.navigationItem.leftBarButtonItem = self.editButtonItem;
+        
+        
            
     }
-    
+
+
 
     /*
     // MARK: - Navigation

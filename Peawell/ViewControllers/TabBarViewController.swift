@@ -35,8 +35,8 @@ class TabBarViewController: UITabBarController {
         let nav2 = UINavigationController(rootViewController: vc2)
         let nav3 = UINavigationController(rootViewController: vc3)
         //  set icons to bar
-        nav0.tabBarItem = UITabBarItem(title: "Peawell", image: UIImage(systemName: "calendar"), tag: 0)
-        nav1.tabBarItem = UITabBarItem(title: "Actions", image: UIImage(systemName: "text.badge.plus"), tag: 1)
+        nav0.tabBarItem = UITabBarItem(title: "Peawell", image: UIImage(systemName: "house"), tag: 0)
+        nav1.tabBarItem = UITabBarItem(title: "Actions", image: UIImage(systemName: "list.bullet"), tag: 1)
         nav2.tabBarItem = UITabBarItem(title: "Reminders", image: UIImage(systemName: "bell"), tag: 2)
         nav3.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 3)
 
